@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EfgpFormScriptDownloader": {
+      "commandName": "Project",
+      "commandLineArgs": "192.168.100.101 EFGP D:\\Desktop"
+    }
+  }
+}
