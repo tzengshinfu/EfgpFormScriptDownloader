@@ -31,7 +31,7 @@ namespace EfgpFormScriptDownloader {
                 }
 
                 var fileName = directoryPath + "\\" + result.id + ".js";
-                File.WriteAllText(fileName, result.script, Encoding.UTF8);
+                File.WriteAllText(fileName, result.script);
                 Console.WriteLine($"表單[{result.formDefinitionName}]匯出完成");
             }
         }
