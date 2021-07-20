@@ -3,7 +3,6 @@ using System;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace EfgpFormScriptDownloader {
     class Program {
@@ -31,7 +30,7 @@ namespace EfgpFormScriptDownloader {
                 }
 
                 var fileName = directoryPath + "\\" + result.id + ".js";
-                File.WriteAllText(fileName, result.script);
+                File.WriteAllText(fileName, (result.script as string).Replace("\n", "\r\n"));
                 Console.WriteLine($"表單[{result.formDefinitionName}]匯出完成");
             }
         }
